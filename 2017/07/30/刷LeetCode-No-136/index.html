@@ -87,13 +87,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="https://lampui.github.io/index.html">
+<meta name="description" content="今天刷了两道LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。123var singleNumber = function(nums) &amp;#123;    return nums.reduce((a, b) =&amp;gt; a^b);&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="刷LeetCode No.136">
+<meta property="og:url" content="https://lampui.github.io/2017/07/30/刷LeetCode-No-136/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="今天刷了两道LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。123var singleNumber = function(nums) &amp;#123;    return nums.reduce((a, b) =&amp;gt; a^b);&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-31T13:30:09.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="刷LeetCode No.136">
+<meta name="twitter:description" content="今天刷了两道LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。123var singleNumber = function(nums) &amp;#123;    return nums.reduce((a, b) =&amp;gt; a^b);&amp;#125;">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://lampui.github.io/"/>
+  <link rel="canonical" href="https://lampui.github.io/2017/07/30/刷LeetCode-No-136/"/>
 
 
 
 
 
-  <title> Blog </title>
+  <title> 刷LeetCode No.136 | Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -288,10 +290,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/07/30/刷LeetCode-No-136/" itemprop="url">
-                  刷LeetCode No.136
-                </a>
+                刷LeetCode No.136
               
             
           </h1>
@@ -364,28 +363,41 @@
       
 
       
+        <p>今天刷了两道LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a^b);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><a id="more"></a><br>首先看题目的描述</p>
+<blockquote>
+<p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
+<p>Note:<br>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
+</blockquote>
+<p>题目中文大意是说：给出一个整型数组，除了1个元素只出现1次，其他元素都出现2次，找出只出现1次的这个元素。<br>我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现2次的元素，该元素会有两个不同的索引，对于只出现1次的元素，该元素只有一个索引。见代码实现：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> result;</div><div class="line">    nums.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span> (nums.indexOf(element) === nums.lastIndexOf(element)) &#123;</div><div class="line">            result = element;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">return</span> result</div><div class="line">&#125;    </div></pre></td></tr></table></figure></p>
+<p>上面这段代码粗略一看还好，经过一些简单的用例测试，也没出现什么问题，但当我提交的时候却返回了 Time Limit Exceed，回过头来再看看，问题出现在了 forEach() 循环里面，在已经找到后，应该停止遍历，但是根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">MDN文档</a>上说的<strong>没有办法中止或者跳出 forEach 循环，除了抛出一个异常</strong>，所以出现了耗费资源的情况。</p>
+<p>再看看题目的提示，a linear runtime complexity, without using extra memory<br>知道了问题所在，去参考了讨论区，得到了下面精湛的解答<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a^b);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>一目了然，上面的代码用上了ES6 的箭头函数，这里不讨论它，有兴趣可以看<a href="http://es6.ruanyifeng.com/#docs/function#箭头函数" target="_blank" rel="external">阮老师对它的介绍</a>，妙的地方是在reduce()函数和异或运算的使用。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> nums.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> a^b;</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>这里reduce()的回调函数只给了2个参数，一个是a，累加器(accumulator，理解为结果叠加)，另一个是b，当前遍历到的数组元素。由于reduce()函数只有一个回调函数作参数，所以这里a的初始值为数组第一个元素的值，b的初始值为数组第二个元素的值，每一次进行a^b运算都将结果赋给a。假设有[2,3,8,7,8,3,2]这么一个数组，具体执行其实就是</p>
+<pre>
+((((((2^3)^8)^7)^8)^3)^2)
+=(2^2)^(3^3)^(8^8)^(7)//异或运算结合律(试想加法结合律)
+=(0)^(0)^(0)^(7)
+=7
+</pre>
+      
+    </div>
+
+    <div>
+      
         
-          <p>今天刷了两道LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleNumber = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> nums.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a^b);</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/30/刷LeetCode-No-136/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
@@ -393,169 +405,38 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lampui.github.io/2017/04/27/记广州老人院一行/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lam Pui">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/27/记广州老人院一行/" rel="next" title="记广州老人院一行">
+                <i class="fa fa-chevron-left"></i> 记广州老人院一行
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/04/27/记广州老人院一行/" itemprop="url">
-                  记广州老人院一行
-                </a>
-              
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T18:26:10+08:00">
-                2017-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <blockquote>
-<p>&emsp;&emsp;2017年04月27日，我跟班里的几位朋友去了广州市老人院，这是我有史以来第一次去老人院。广州市老人院坐落于广州市从化区，也就离我们学校大概两首歌的车程，下了车后，由于那条在建的地铁14号线，我们不得不绕了一小段路才过到对面的马路。老人院的正门在装修，但给人一眼看过去的感觉却像是在拆迁。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/27/记广州老人院一行/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -563,6 +444,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -757,6 +642,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
