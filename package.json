@@ -1,0 +1,28 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "A blog",
+  "main": "blog/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lampui/lampui.github.io.git"
+  },
+  "keywords": [
+    "Blog"
+  ],
+  "author": "Lam Pui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lampui/lampui.github.io/issues"
+  },
+  "homepage": "https://github.com/lampui/lampui.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
+    "lodash.clonedeep": "^4.5.0"
+  }
+}
