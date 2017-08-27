@@ -93,4 +93,4 @@ friends: [
     }
 ]
 
-exclude: [_site]
+exclude: ["Gemfile", "Gemfile.lock", "node_modules"]
