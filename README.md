@@ -1,9 +1,6 @@
 # 一个思考与沉淀的角落
+> 人的成就感来源于两样东西，创造和毁灭。
+>
+> 写作是最简单的创作。
 
-##### This is the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), all documents is over there!
-
-#### [View Boilerplate &rarr;](http://huangxuan.me/huxblog-boilerplate/)
-
-#### [View Live Hux Blog &rarr;](http://huangxuan.me)
-
-## If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io) instead of this! Thank you!
+<p align="right">—— 2017 年夏天</p>
