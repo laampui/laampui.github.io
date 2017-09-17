@@ -18,8 +18,10 @@ tags:
 //以解锁至美区为例
 adb shell setprop gsm.sim.operator.numeric 310053
 adb shell setprop gsm.operator.numeric 310053
-adb shell getprop gsm.sim.operator.iso-country us
-adb shell getprop gsm.operator.iso-country us
+adb shell setprop gsm.sim.operator.iso-country us
+adb shell setprop gsm.operator.iso-country us
+
+//查询设置是否成功只需将 setprop 改为 getprop，并删除后面的属性值
 ```
 至此，搞定了 sim 卡，只需挂一个美帝的 IP 代理，重新登录 Google 即可。
 
