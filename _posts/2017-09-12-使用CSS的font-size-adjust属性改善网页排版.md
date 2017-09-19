@@ -29,7 +29,7 @@ CSS 中的 `font-size-adjust` [属性](https://drafts.csswg.org/css-fonts-3/#pro
 
 举个例子，看下面的代码：
 
-```
+```css
 body {
   font-family: 'Lato', Verdana, sans-serif;
 }
@@ -49,7 +49,7 @@ body {
 
 现在你知道使用 `font-size-adjust` 属性的重要性了吧，是时候把它用到你的网站上了。这个属性的语法如下：
 
-```
+```css
 font-size-adjust: none | <number>
 ```
 
@@ -57,14 +57,14 @@ font-size-adjust: none | <number>
 
 你也可以设置属性的值为一个数字，这个数字将用来计算一张网页上所有字体的 x 轴高度，x 轴高度等于这个数字乘以 `font-size` 的值。 这可以提高小尺寸字体的可读性。以下是一个使用 `font-size-adjust` 属性的例子：
 
-```
+```css
 font-size: 20px;
 font-size-adjust: 0.6;
 ```
 
 所有字体的 x 轴高度现在是 20px * 0.6 = 12px，一种字体的实际大小现在可以被修改以确保 x 轴高度总是等于 12px。调整后 `font-size` 的值可以通过以下公式计算
 
-```
+```markup
 c = ( a / a' ) s.
 ```
 
@@ -84,7 +84,7 @@ c = ( a / a' ) s.
 
 以下是相关代码：
 
-```
+```css
 .adjusted-a {
   font-size-adjust: 0.4;
 }

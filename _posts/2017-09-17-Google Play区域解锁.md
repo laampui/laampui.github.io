@@ -14,7 +14,7 @@ tags:
 &emsp;&emsp;首先删除 Google, Google Play Store, Google Play Service 以及 Google Service Framework 这四个应用的数据。
 
 接着敲 adb 命令：
-```
+```markup
 //以解锁至美区为例
 adb shell setprop gsm.sim.operator.numeric 310053
 adb shell setprop gsm.operator.numeric 310053
