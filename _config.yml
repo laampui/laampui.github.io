@@ -53,20 +53,20 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title: "掘金",
+        href: "//juejin.im/"
     },{
-        title: "Foo",
-        href: "#"
+        title: "Medium",
+        href: "//medium.com"
     },{
-        title: "Bar",
-        href: "#"
+        title: "JavaScript Weekly",
+        href: "//javascriptweekly.com"
     },{
-        title: "Example Friends",
-        href: "#"
+        title: "leetcode",
+        href: "//leetcode.com"
     },{
-        title: "It helps SEO",
-        href: "#"
+        title: "ReadHub",
+        href: "//readhub.me"
     }
 ]
 
