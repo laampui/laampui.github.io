@@ -72,3 +72,4 @@ friends: [
 exclude: ["Gemfile", "Gemfile.lock", "node_modules"]
 
 host: 0.0.0.0
+timezone: Asia/Shanghai
