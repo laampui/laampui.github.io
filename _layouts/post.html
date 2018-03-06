@@ -1,5 +1,5 @@
 --- 
-    layout: default 
+layout: default 
 ---
 
 <!-- Image to hack wechat -->
@@ -77,8 +77,8 @@
           <div class="tags">
             {% for tag in site.tags %} {% if tag[1].size > site.featured-condition-size %}
             <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a> {% endif %} {% endfor %}
+              {{ tag[0] }}
+            </a> {% endif %} {% endfor %}
           </div>
         </section>
         {% endif %}
@@ -86,7 +86,7 @@
         <!-- Friends Blog -->
         {% if site.friends %}
         <hr>
-        <h5>FRIENDS</h5>
+        <h5>活跃于：</h5>
         <ul class="list-inline">
           {% for friend in site.friends %}
           <li><a href="{{friend.href}}">{{friend.title}}</a></li>
