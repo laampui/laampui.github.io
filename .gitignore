@@ -1,6 +1,3 @@
-_site/
-.sass-cache/
-node_modules/
-Gemfile
-Gemfile.lock
-img/
+_site
+.sass-cache
+.jekyll-metadata

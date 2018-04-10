@@ -1,75 +1,43 @@
-# Site settings
-title: Pui's Blog
-SEOTitle: Pui's Blog
-header-img: img/home-bg.jpg
-email: lpwowo@gmail.com
-description: ""
-keyword: ""
-url: "https://lampui.github.io"              # your host, for absolute URL
-baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# SNS settings
-RSS: false
-telegram_username: lampui
-#zhihu_username: huxpro
-github_username: lampui
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Pui's blog
+email: lpwowo@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: reallampui
-#facebook_username:  huxpro
+github_username:  lampui
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+theme: minima
+plugins:
+  - jekyll-feed
 
-# Analytics settings
-# Google Analytics
-ga_track_id: 'UA-102592080-1'            # Format: UA-xxxxxx-xx
-# ga_domain: huangxuan.me
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，打打单机。"
-sidebar-avatar: img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-# Friends
-friends: [
-    {
-        title: "掘金",
-        href: "//juejin.im/user/55b2d202e4b011439bd1254b"
-    },{
-        title: "Medium",
-        href: "//medium.com"
-    },{
-        title: "JavaScript Weekly",
-        href: "//javascriptweekly.com"
-    },{
-        title: "leetcode",
-        href: "//leetcode.com"
-    },{
-        title: "ReadHub",
-        href: "//readhub.me"
-    }
-]
-
-exclude: ["Gemfile", "Gemfile.lock", "node_modules"]
-
-host: 0.0.0.0
-timezone: Asia/Shanghai
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

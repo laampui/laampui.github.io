@@ -3,10 +3,10 @@ layout: post
 title: "Google Play 区域解锁"
 date: 2017-09-17 20:30:45
 author: Lam Pui
-header-img: ../img/smartphone.jpg
 tags: 
     - 折腾
 ---
+![](https://i.imgur.com/isbnwuD.jpg)
 &emsp;&emsp;这几天，先是在 Google Fit 里面发现无法 Turn on location history，用了 Market Unlocker 却一直更换不了运行商，一直显示 Empty(Flight Mode)，又下了个 Market Enabler，却也无果，但发现了该应用里有 `gsm.sim.operator.numeric` 的字眼，于是寻着这段英文，开始了折腾。
 
 &emsp;&emsp;`gsm.sim.operator.numeric` 是系统的一个参数，道理很简单，就是通过 adb 去设置参数。跟之前用 adb 消除类原生 ROM 上的信号/WIFI叉叉类似。
