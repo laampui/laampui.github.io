@@ -17,7 +17,7 @@ CSS 中的 `font-size-adjust` [[https://drafts.csswg.org/css-fonts-3/#propdef-fo
 
 在这篇文章中，你不仅能了解到 [[https://drafts.csswg.org/css-fonts-3/#propdef-font-size-adjust][font-size-adjust]] 属性的重要性，并且还能学会如何在你的项目中使用它。
 
-## font-size-adjust 的重要性
+** font-size-adjust 的重要性
 
 你访问的网站大多都是由文本组成的，由于书面文字是网站的重要组成部分，因此就很值得把注意力放到你用来显示信息的字体上面。选对正确的字体能带给用户愉快的阅读体验，然而，使用不恰当的字体则会使网站变得难以阅读。当你决定将要使用什么字体后，一般你就会再给这个字体选择一个合适的大小。
 
@@ -119,8 +119,3 @@ c = ( a / a' ) s.
 因为 `font-size-adjust` 在旧浏览器中优雅降级，你今天就可以直接应用该属性到你的生产环境中，以便提高页面文字易读性。
 
 你还有其他工具或方法可以帮助开发者更快地计算纵横比吗？留言告诉他们吧。
-
-
----
-
-> [掘金翻译计划](https://github.com/xitu/gold-miner) 是一个翻译优质互联网技术文章的社区，文章来源为 [掘金](https://juejin.im) 上的英文分享文章。内容覆盖 [Android](https://github.com/xitu/gold-miner#android)、[iOS](https://github.com/xitu/gold-miner#ios)、[React](https://github.com/xitu/gold-miner#react)、[前端](https://github.com/xitu/gold-miner#前端)、[后端](https://github.com/xitu/gold-miner#后端)、[产品](https://github.com/xitu/gold-miner#产品)、[设计](https://github.com/xitu/gold-miner#设计) 等领域，想要查看更多优质译文请持续关注 [掘金翻译计划](https://github.com/xitu/gold-miner)、[官方微博](http://weibo.com/juejinfanyi)、[知乎专栏](https://zhuanlan.zhihu.com/juejinfanyi)。

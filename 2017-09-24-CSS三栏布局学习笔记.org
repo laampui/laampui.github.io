@@ -1,6 +1,6 @@
 今天学习了两边定宽，中间自适应的三栏布局，有 4 种实现方法，接下来一一记录。
 
-## 绝对定位
+** 绝对定位
 
 优点：
 
@@ -13,7 +13,7 @@
 </div>
 ```
 
-```css
+#+BENGIN_SRC css
 .container {
     position: relative;
     height: 100vh;
@@ -39,18 +39,18 @@
     height: 100vh;
     background: blue;
 }
-```
-## 圣杯布局
+#+END_SRC
+** 圣杯布局
 
-```html
+#+BEGIN_SRC browser
 <div class="container">
     <div class="main column"></div>
     <div class="left column"></div>    
     <div class="right column"></div>
 </div>
-```
+#+END_SRC
 
-```css
+#+BEGIN_SRC css
 .container {
     padding: 0 300px 0 200px;
 }
@@ -79,19 +79,19 @@
     */
     background: red;
 }
-```
+#+END_SRC
 
-## 双飞翼布局
+** 双飞翼布局
 
-```html
+#+BEGIN_SRC browser
 <div class="container">
     <div class="main column"></div>
     <div class="left column"></div>    
     <div class="right column"></div>
 </div>
-```
+#+END_SRC
 
-```css
+#+BEGIN_SRC css
 .container {
   height: 100vh;
 }
@@ -116,16 +116,16 @@
 .inner {
   margin: 0 300px 0 200px;
 }
-```
-## 流动布局实现
-```html
+#+END_SRC
+** 流动布局实现
+#+BEGIN_SRC browser
 <div class="container">
     <div class="left"></div>
     <div class="right"></div>
     <div class="main"></div>
 </div>
-```
-```css
+#+END_SRC
+#+BEGIN_SRC css
 .container {
     height: 100vh;
 }
@@ -146,5 +146,4 @@
     width: 300px;
     background: yellow;
 }
-
-```
+#+END_SRC

@@ -12,7 +12,7 @@ srcset 属性可以让浏览器有所选择地下载适合的图片。
 情景1：根据 `devicePixelRatio` 大小，让浏览器选择合适的图片
 
 这种用法仅限于 img 标签宽度已知
-#+BEGIN_SRC HTML
+#+BEGIN_SRC browser
 <img src="/uploads/100-marie-lloyd.jpg"
     srcset="/uploads/150-marie-lloyd.jpg 1.5x, 
             /uploads/200-marie-lloyd.jpg 2x"
@@ -21,7 +21,7 @@ srcset 属性可以让浏览器有所选择地下载适合的图片。
 上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，`150-marie-lloyd.jpg` 这幅图片会被下载使用；当屏幕像素比为 2 时，`200-marie-lloyd.jpg` 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 `srcset` 属性时，`100-marie-lloyd.jpg` 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
 
 情景2：根据 `Viewport` 大小，让浏览器选择适合的图片
-#+BEGIN_SRC HTML
+#+BEGIN_SRC browser
 <img sizes="(max-width: 30em) 100vw, 
             (max-width: 50em) 50vw, 
             calc(33vw - 100px)"
