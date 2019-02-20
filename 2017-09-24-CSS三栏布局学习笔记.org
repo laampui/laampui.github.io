@@ -1,19 +1,15 @@
 今天学习了两边定宽，中间自适应的三栏布局，有 4 种实现方法，接下来一一记录。
 
 ** 绝对定位
-
-优点：
-
-缺点：
-```html
+#+BEGIN_SRC browser
 <div class="container">
     <div class="left"></div>
     <div class="main"></div>
     <div class="right"></div>
 </div>
-```
+#+END_SRC
 
-#+BENGIN_SRC css
+#+BEGIN_SRC css
 .container {
     position: relative;
     height: 100vh;
