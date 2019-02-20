@@ -1,13 +1,3 @@
-#+STARTUP: showall indent
-#+STARTUP: hidestars
-#+BEGIN_HTML
----
-layout: post
-title: "srcset 属性了解一下"
-date: 2018-04-10 +0800
-author: Lam Pui
----
-#+END_HTML
 @@html:&emsp;&emsp;@@    要理解 `srcset` 属性，首先要了解 `devicePixelRatio`，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 `window.devicePixelRatio` 查看
 
 ![window.devicePixelRatio](https://i.imgur.com/qQrxtHE.png)

@@ -1,13 +1,3 @@
-#+BEGIN_HTML
----
-layout: post
-title: "刷LeetCode No.136"
-date: 2017-07-30 19:05:48
-author: Lam Pui
-tags: 
-    - JavaScript
----
-#+END_HTML
 今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。
 
 #+BEGIN_SRC js
