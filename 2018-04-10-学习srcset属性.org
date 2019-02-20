@@ -1,8 +1,8 @@
 要理解 `srcset` 属性，首先要了解 `devicePixelRatio`，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 `window.devicePixelRatio` 查看
 
-https://i.imgur.com/qQrxtHE.png
+[[https://i.imgur.com/qQrxtHE.png]]
 
-@@html:&emsp;&emsp;@@上图中的"1"表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+上图中的"1"表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
 
 在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
 #+BEGIN_QUOTE
