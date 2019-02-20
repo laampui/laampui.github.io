@@ -1,5 +1,5 @@
 这是上周在掘金领的一篇翻译，是关于 CSS 的文章，我将网页放大了 5 倍都没看出什么区别来。
-<hr>
+-----
 #+BEGIN_QUOTE
 原文地址：[[https://www.sitepoint.com/improve-web-typography-css-font-size-adjust/?utm_source=SitePoint&utm_medium=email&utm_campaign=Versioning][Improve Web Typography with CSS Font Size Adjust]]
 
@@ -13,9 +13,9 @@
 
 校对者：[[https://github.com/sunui][sun]]、[[https://github.com/Yuuoniy][Yuuoniy]]
 #+END_QUOTE
-CSS 中的 `font-size-adjust` [属性](https://drafts.csswg.org/css-fonts-3/#propdef-font-size-adjust)允许开发者基于小写字母的高度指定 `font-size` ，这可以有效地提高网页文字的可读性。
+CSS 中的 `font-size-adjust` [[https://drafts.csswg.org/css-fonts-3/#propdef-font-size-adjust][属性]]允许开发者基于小写字母的高度指定 `font-size` ，这可以有效地提高网页文字的可读性。
 
-在这篇文章中，你不仅能了解到 [font-size-adjust](https://drafts.csswg.org/css-fonts-3/#propdef-font-size-adjust) 属性的重要性，并且还能学会如何在你的项目中使用它。
+在这篇文章中，你不仅能了解到 [[https://drafts.csswg.org/css-fonts-3/#propdef-font-size-adjust][font-size-adjust]] 属性的重要性，并且还能学会如何在你的项目中使用它。
 
 ## font-size-adjust 的重要性
 
@@ -31,7 +31,7 @@ body {
 }
 #+END_SRC
 
-如果你的浏览器从 [Google Fonts](https://fonts.google.com/?query=lato&selection.family=Lato) 下载的 ‘Lato’ 字体不可用时，在这种情况下，Verdana 字体就会被使用。但是，脑海里 `font-size` 的值好像是针对 ‘Lato’ 字体设定的，而不是 Verdana。
+如果你的浏览器从 [[https://fonts.google.com/?query=lato&selection.family=Lato][Google Fonts]] 下载的 ‘Lato’ 字体不可用时，在这种情况下，Verdana 字体就会被使用。但是，脑海里 `font-size` 的值好像是针对 ‘Lato’ 字体设定的，而不是 Verdana。
 
 *** 什么是字体的纵横比？
 
@@ -39,7 +39,7 @@ body {
 
 正如我之前说的，一旦你设置了 `font-size` 的值，这个值将会对所有的字体起作用。如果候选字体的纵横比跟首选字体的纵横比相差太大，这可能影响候选字体的易读性。
 
-`font-size-adjust` 属性在这种情形下则扮演着一个尤为重要的角色，因为它允许你设置所有字体的 [x 轴高度](https://typedecon.com/blogs/type-glossary/x-height/) 为统一大小，以便提高文字的易读性。
+`font-size-adjust` 属性在这种情形下则扮演着一个尤为重要的角色，因为它允许你设置所有字体的  [[https://typedecon.com/blogs/type-glossary/x-height/][x 轴高度]]为统一大小，以便提高文字的易读性。
 
 ** 给 font-size-adjust 属性选择合适的值
 
