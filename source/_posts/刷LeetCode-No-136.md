@@ -1,0 +1,67 @@
+---
+layout: post
+title: "刷LeetCode No.136"
+date: 2017-07-30 19:05:48
+author: Lam Pui
+categories:
+- 技术
+tags: 
+    - JavaScript
+---
+今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。
+<!--more-->
+```javascript
+var singleNumber = function(nums) {
+    return nums.reduce((a, b) => a^b);
+}
+```
+
+首先看题目的描述
+>Given an array of integers, every element appears twice except for one. Find that single one.
+
+>Note:
+>Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+题目中文大意是说：给出一个整型数组，除了 1 个元素只出现 1 次，其他元素都出现 2 次，找出只出现 1 次的这个元素。
+我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现 2 次的元素，该元素会有两个不同的索引，对于只出现 1 次的元素，该元素只有一个索引。见代码实现：
+
+```javascript
+var singleNumber = function(nums) {
+    var result;
+    nums.forEach(function(element) {
+        if (nums.indexOf(element) === nums.lastIndexOf(element)) {
+            result = element;
+        }
+    });
+    return result
+}
+```
+
+上面这段代码粗略一看还好，经过一些简单的用例测试，也没出现什么问题，但当我提交的时候却返回了 Time Limit Exceed，回过头来再看看，问题出现在了 forEach() 循环里面，在已经找到后，应该停止遍历，但是根据 [MDN 文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)上说的**没有办法中止或者跳出 forEach 循环，除了抛出一个异常**，所以出现了耗费资源的情况。
+
+再看看题目的提示，a linear runtime complexity, without using extra memory
+知道了问题所在，去参考了讨论区，得到了下面精湛的解答
+
+```javascript
+var singleNumber = function(nums) {
+    return nums.reduce((a, b) => a^b);
+}
+```
+
+一目了然，上面的代码用上了 ES6 的箭头函数，这里不讨论它，有兴趣可以看[阮老师对它的介绍](http://es6.ruanyifeng.com/#docs/function#箭头函数)，妙的地方是在 reduce() 函数和异或运算的使用。
+
+```javascript
+var singleNumber = function(nums) {
+    return nums.reduce(function(a,b) {
+        return a^b;
+    })
+}
+```
+
+这里 reduce() 的回调函数只给了 2 个参数，一个是 a，累加器(accumulator，理解为结果叠加)，另一个是 b，当前遍历到的数组元素。由于 reduce() 函数只有一个回调函数作参数，所以这里 a 的初始值为数组第一个元素的值，b 的初始值为数组第二个元素的值，每一次进行 a^b 运算都将结果赋给 a。假设有[2,3,8,7,8,3,2]这么一个数组，具体执行其实就是
+```markup
+((((((2^3)^8)^7)^8)^3)^2)
+=(2^2)^(3^3)^(8^8)^(7)//异或运算结合律(试想加法结合律)
+=(0)^(0)^(0)^(7)
+=7
+```
