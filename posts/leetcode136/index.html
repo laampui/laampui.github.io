@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="刷LeetCode No.136" />
+<meta property="og:description" content="今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。 1 2 3  var singleNumber = function(nums) { return nums.reduce((a, b) =&gt; a^b); }    首先看题目的描述
+Given an array of integers, every element appears twice except for one. Find that single one.
+Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+题目中文大意是说：给出一个整型数组，除了 1 个元素只出现 1 次，其他元素都出现 2 次，找出只出现 1 次的这个元素。 我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现 2 次的元素，该元素会有两个不同的索引，对于只出现 1 次的元素，该元素只有一个索引。见代码实现： 1 2 3 4 5 6 7 8 9  var singleNumber = function(nums) { var result; nums." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/leetcode136/" />
+<meta property="article:published_time" content="2017-07-30T10:16:51&#43;08:00"/>
+<meta property="article:modified_time" content="2017-07-30T10:16:51&#43;08:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="刷LeetCode No.136"/>
+<meta name="twitter:description" content="今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。 1 2 3  var singleNumber = function(nums) { return nums.reduce((a, b) =&gt; a^b); }    首先看题目的描述
+Given an array of integers, every element appears twice except for one. Find that single one.
+Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+题目中文大意是说：给出一个整型数组，除了 1 个元素只出现 1 次，其他元素都出现 2 次，找出只出现 1 次的这个元素。 我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现 2 次的元素，该元素会有两个不同的索引，对于只出现 1 次的元素，该元素只有一个索引。见代码实现： 1 2 3 4 5 6 7 8 9  var singleNumber = function(nums) { var result; nums."/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://example.com/posts/leetcode136/">
+
+    
+        
+    <title>刷LeetCode No.136 &middot; Laam Pui&#39;s Blog</title>
+    
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://example.com/css/style.css" rel="stylesheet">
+    
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+
+
+<nav class="white" role="navigation">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1">
+            
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text">
+                <i class="material-icons">menu</i>
+            </a>
+
+            
+            <ul id="nav-mobile" class="sidenav">
+                
+                
+    
+        
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+    
+        
+            
+<li>
+    <a class="black-text" href="/">Home</a>
+</li>
+
+        
+    
+    
+
+            </ul>
+
+            
+            <a href="/" class="brand-logo grey-text text-darken-3">Laam Pui&#39;s Blog</a>
+
+            
+            <div class="nav-wrapper">
+
+                
+                <ul class="right hide-on-med-and-down">
+                    
+                    
+    
+        
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+    
+        
+            
+<li>
+    <a class="black-text" href="/">Home</a>
+</li>
+
+        
+    
+    
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>刷LeetCode No.136</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Jul 30, 2017</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">singleNumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span><span style="color:#f92672">^</span><span style="color:#a6e22e">b</span>);
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+首先看题目的描述</p>
+
+<p>Given an array of integers, every element appears twice except for one. Find that single one.</p>
+
+<p>Note:
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?</p>
+
+<p>题目中文大意是说：给出一个整型数组，除了 1 个元素只出现 1 次，其他元素都出现 2 次，找出只出现 1 次的这个元素。
+我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现 2 次的元素，该元素会有两个不同的索引，对于只出现 1 次的元素，该元素只有一个索引。见代码实现：
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">singleNumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>) {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span>;
+    <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">element</span>) {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">element</span>) <span style="color:#f92672">===</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">lastIndexOf</span>(<span style="color:#a6e22e">element</span>)) {
+            <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>;
+        }
+    });
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+上面这段代码粗略一看还好，经过一些简单的用例测试，也没出现什么问题，但当我提交的时候却返回了 Time Limit Exceed，回过头来再看看，问题出现在了 forEach() 循环里面，在已经找到后，应该停止遍历，但是根据 MDN 文档上说的没有办法中止或者跳出 forEach 循环，除了抛出一个异常，所以出现了耗费资源的情况。</p>
+
+<p>再看看题目的提示，a linear runtime complexity, without using extra memory
+知道了问题所在，去参考了讨论区，得到了下面精湛的解答
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">singleNumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span><span style="color:#f92672">^</span><span style="color:#a6e22e">b</span>);
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+一目了然，上面的代码用上了 ES6 的箭头函数，这里不讨论它，有兴趣可以看阮老师对它的介绍，妙的地方是在 reduce() 函数和异或运算的使用。
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">singleNumber</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">nums</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">^</span><span style="color:#a6e22e">b</span>;
+    })
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+这里 reduce() 的回调函数只给了 2 个参数，一个是 a，累加器(accumulator，理解为结果叠加)，另一个是 b，当前遍历到的数组元素。由于 reduce() 函数只有一个回调函数作参数，所以这里 a 的初始值为数组第一个元素的值，b 的初始值为数组第二个元素的值，每一次进行 a^b 运算都将结果赋给 a。假设有[2,3,8,7,8,3,2]这么一个数组，具体执行其实就是
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">((((((<span style="color:#ae81ff">2</span><span style="color:#f92672">^</span><span style="color:#ae81ff">3</span>)<span style="color:#f92672">^</span><span style="color:#ae81ff">8</span>)<span style="color:#f92672">^</span><span style="color:#ae81ff">7</span>)<span style="color:#f92672">^</span><span style="color:#ae81ff">8</span>)<span style="color:#f92672">^</span><span style="color:#ae81ff">3</span>)<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>)
+<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">^</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">3</span><span style="color:#f92672">^</span><span style="color:#ae81ff">3</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">8</span><span style="color:#f92672">^</span><span style="color:#ae81ff">8</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">7</span>)<span style="color:#75715e">//异或运算结合律(试想加法结合律)
+</span><span style="color:#75715e"></span><span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">0</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">0</span>)<span style="color:#f92672">^</span>(<span style="color:#ae81ff">7</span>)
+<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>
+</code></pre></td></tr></table>
+</div>
+</div></p>
+
+        </div>
+    </section>
+</article>
+
+
+
+    
+      <footer class="page-footer grey lighten-5">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="black-text">Footer Content</h5>
+<p class="grey-text text-darken-4">You can use rows and columns here to organize your footer content.</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+<h5 class="black-text">Home</h5>
+<ul>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/">Home</a>
+    </li>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/about/">About</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+<h5 class="black-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/#">Service 1</a>
+    </li>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/#">Service 2</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="grey-text text-darken-4">© 2019 Copyright Text</span>
+<div class="right">
+    
+<ul id="dropdown-languages" class="dropdown-content">
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/">English</a>
+    </li>
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/fr/">Français</a>
+    </li>
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/zh/">简体中文</a>
+    </li>
+    
+</ul>
+<a class="dropdown-languages-selector dropdown-trigger black-text" href="#!" data-target="dropdown-languages">English
+    <i class="material-icons right">arrow_drop_down</i>
+</a>
+
+
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://example.com/js/script.js"></script>
+  </body>
+</html>

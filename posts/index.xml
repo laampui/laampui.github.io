@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Laam Pui&#39;s Blog</title>
+    <link>https://example.com/posts/</link>
+    <description>Recent content in Posts on Laam Pui&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2019 Copyright Text</copyright>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>学习 srcset 属性</title>
+      <link>https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</guid>
+      <description>&amp;emsp;&amp;emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
+&amp;emsp;&amp;emsp;上图中的&amp;rdquo;1&amp;rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+&amp;emsp;&amp;emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+ srcset 属性可以让浏览器有所选择地下载适合的图片。
+ &amp;emsp;&amp;emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+&amp;emsp;&amp;emsp;这种用法仅限于 img 标签宽度已知 1 2 3 4  &amp;lt;img src=&amp;#34;/uploads/100-marie-lloyd.jpg&amp;#34; srcset=&amp;#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&amp;#34; alt=&amp;#34;A singer on the stage&amp;#34; width=&amp;#34;100&amp;#34; height=&amp;#34;150&amp;#34;&amp;gt;   &amp;emsp;&amp;emsp;上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。</description>
+    </item>
+    
+    <item>
+      <title>[译] 使用 CSS 的 font-size-adjust 属性改善网页排版</title>
+      <link>https://example.com/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</link>
+      <pubDate>Wed, 13 Sep 2017 10:30:45 +0000</pubDate>
+      
+      <guid>https://example.com/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</guid>
+      <description>这是上周在掘金领的一篇翻译，是关于 CSS 的文章，我将网页放大了 5 倍都没看出什么区别来。 
+  原文地址：Improve Web Typography with CSS Font Size Adjust 原文作者：Panayotis Matsinopoulos 译文出自：掘金翻译计划 本文永久链接：https://github.com/xitu/gold-miner/blob/master/TODO/improve-web-typography-css-font-size-adjust.md 译者：lampui 校对者：sun、Yuuoniy   CSS 中的 font-size-adjust 属性允许开发者基于小写字母的高度指定 font-size ，这可以有效地提高网页文字的可读性。
+在这篇文章中，你不仅能了解到 font-size-adjust 属性的重要性，并且还能学会如何在你的项目中使用它。
+font-size-adjust 的重要性 你访问的网站大多都是由文本组成的，由于书面文字是网站的重要组成部分，因此就很值得把注意力放到你用来显示信息的字体上面。选对正确的字体能带给用户愉快的阅读体验，然而，使用不恰当的字体则会使网站变得难以阅读。当你决定将要使用什么字体后，一般你就会再给这个字体选择一个合适的大小。
+font-size　属性会设置网页中所有 font-family 下你想使用的字体的大小，然而在大多数情况下，浏览器一般都是使用 font-family 下声明的第一种字体。只有当第一种字体因为某些原因不可用时，浏览器才会使用候选字体继续渲染页面。
+举个例子，看下面的代码：
+1 2 3  body { font-family: &amp;#39;Lato&amp;#39;, Verdana, sans-serif; }   如果你的浏览器从 Google Fonts 下载的 ‘Lato’ 字体不可用时，在这种情况下，Verdana 字体就会被使用。但是，脑海里 font-size 的值好像是针对 ‘Lato’ 字体设定的，而不是 Verdana。
+什么是字体的纵横比？ 字体的外观尺寸及其可读性可能会因为 font-size 的值而产生很大的变化，特别像是对拉丁文这种文字会导致其在大小写之间差别巨大。在这种情况下，小写字母与对应的大写字母的高度比例是决定一种字体易读性的重要因素，这个比值通常被叫做一种字体的纵横比。</description>
+    </item>
+    
+    <item>
+      <title>利用 xrandr 修改 Linux 屏幕分辨率</title>
+      <link>https://example.com/posts/xrandr/</link>
+      <pubDate>Sun, 03 Sep 2017 11:46:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/xrandr/</guid>
+      <description>  不像 Windows 的远程桌面连接，可以在外观选项卡自动调节屏幕分辨率，Linux 中要做点工作，在使用大屏幕计算机远程自己的小屏幕计算机时，显得较为有用，让它全屏显示。 每一行都是命令，即可以打开终端逐个字母地敲，但……因为效（tōu）率（lǎn），复制粘贴到~/.profile文件中，每次开机让系统自动加载。。。  1 2 3 4 5 6 7 8  #set high resulotion cvt 1920 1080 xrandr --newmode &amp;#34;1920x1080&amp;#34; 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1920x1080&amp;#34; cvt 1440 900 xrandr --newmode &amp;#34;1440x900&amp;#34; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1440x900&amp;#34; # 使用 xandr -s 1920x1080   </description>
+    </item>
+    
+    <item>
+      <title>刷LeetCode No.136</title>
+      <link>https://example.com/posts/leetcode136/</link>
+      <pubDate>Sun, 30 Jul 2017 10:16:51 +0800</pubDate>
+      
+      <guid>https://example.com/posts/leetcode136/</guid>
+      <description>今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。 1 2 3  var singleNumber = function(nums) { return nums.reduce((a, b) =&amp;gt; a^b); }    首先看题目的描述
+Given an array of integers, every element appears twice except for one. Find that single one.
+Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+题目中文大意是说：给出一个整型数组，除了 1 个元素只出现 1 次，其他元素都出现 2 次，找出只出现 1 次的这个元素。 我当时想得很简单，分别对每个元素从前和从后开始找它的索引，那么对于出现 2 次的元素，该元素会有两个不同的索引，对于只出现 1 次的元素，该元素只有一个索引。见代码实现： 1 2 3 4 5 6 7 8 9  var singleNumber = function(nums) { var result; nums.</description>
+    </item>
+    
+  </channel>
+</rss>

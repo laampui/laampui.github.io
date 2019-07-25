@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="学习 srcset 属性" />
+<meta property="og:description" content="&emsp;&emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
+&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+&emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+ srcset 属性可以让浏览器有所选择地下载适合的图片。
+ &emsp;&emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+&emsp;&emsp;这种用法仅限于 img 标签宽度已知 1 2 3 4  &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt;   &emsp;&emsp;上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/" />
+<meta property="article:published_time" content="2018-04-10T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-04-10T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="学习 srcset 属性"/>
+<meta name="twitter:description" content="&emsp;&emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
+&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+&emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+ srcset 属性可以让浏览器有所选择地下载适合的图片。
+ &emsp;&emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+&emsp;&emsp;这种用法仅限于 img 标签宽度已知 1 2 3 4  &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt;   &emsp;&emsp;上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/">
+
+    
+        
+    <title>学习 srcset 属性 &middot; Laam Pui&#39;s Blog</title>
+    
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://example.com/css/style.css" rel="stylesheet">
+    
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+
+
+<nav class="white" role="navigation">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1">
+            
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text">
+                <i class="material-icons">menu</i>
+            </a>
+
+            
+            <ul id="nav-mobile" class="sidenav">
+                
+                
+    
+        
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+    
+        
+            
+<li>
+    <a class="black-text" href="/">Home</a>
+</li>
+
+        
+    
+    
+
+            </ul>
+
+            
+            <a href="/" class="brand-logo grey-text text-darken-3">Laam Pui&#39;s Blog</a>
+
+            
+            <div class="nav-wrapper">
+
+                
+                <ul class="right hide-on-med-and-down">
+                    
+                    
+    
+        
+            
+<li>
+    <a class="black-text" href="/about">About</a>
+</li>
+
+        
+    
+        
+            
+<li>
+    <a class="black-text" href="/">Home</a>
+</li>
+
+        
+    
+    
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+
+    
+
+<article class="max-width">
+    
+    <section class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+            <h1>学习 srcset 属性</h1>
+        </div>
+    </section>
+
+    
+    
+
+    
+    <section class="row">
+        <div class="col s12 m8 offset-m2 l2 offset-l1">
+            
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">Apr 10, 2018</span>
+</p>
+        </div>
+        <div class="col s12 m8 offset-m2 l6">
+            <p>&emsp;&emsp;要理解 <code>srcset</code> 属性，首先要了解 <code>devicePixelRatio</code>，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 <code>window.devicePixelRatio</code> 查看</p>
+
+<p><img src="https://i.imgur.com/qQrxtHE.png" alt="window.devicePixelRatio" /></p>
+
+<p>&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。</p>
+
+<p>&emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。</p>
+
+<blockquote>
+<p>srcset 属性可以让浏览器有所选择地下载适合的图片。</p>
+</blockquote>
+
+<p>&emsp;&emsp;情景1：根据 <code>devicePixelRatio</code> 大小，让浏览器选择合适的图片</p>
+
+<p>&emsp;&emsp;这种用法仅限于 img 标签宽度已知
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/100-marie-lloyd.jpg&#34;</span>
+    <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/150-marie-lloyd.jpg 1.5x, 
+</span><span style="color:#e6db74">            /uploads/200-marie-lloyd.jpg 2x&#34;</span>
+    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A singer on the stage&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+&emsp;&emsp;上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，<code>150-marie-lloyd.jpg</code> 这幅图片会被下载使用；当屏幕像素比为 2 时，<code>200-marie-lloyd.jpg</code> 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 <code>srcset</code> 属性时，<code>100-marie-lloyd.jpg</code> 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。</p>
+
+<p>&emsp;&emsp;情景2：根据 <code>Viewport</code> 大小，让浏览器选择适合的图片
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(max-width: 30em) 100vw, 
+</span><span style="color:#e6db74">            (max-width: 50em) 50vw, 
+</span><span style="color:#e6db74">            calc(33vw - 100px)&#34;</span>
+<span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-200.jpg 200w, 
+</span><span style="color:#e6db74">        swing-400.jpg 400w, 
+</span><span style="color:#e6db74">        swing-800.jpg 800w, 
+</span><span style="color:#e6db74">        swing-1600.jpg 1600w&#34;</span>
+<span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-400.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Kettlebell Swing&#34;</span>&gt;</code></pre></td></tr></table>
+</div>
+</div>
+上例，在 <code>sizes</code> 属性加入媒体查询，当 viewport 宽度小于或等于 30em 时，img 标签的 <code>width</code> 将被限制在 100vw。
+<code>srcset</code> 中的 200w, 400w 等，声明图片的实际宽度为 200 像素，400 像素，目的在于让浏览器无需下载图片就知道图片宽度。此时，假设一台 305 像素宽的设备，屏幕像素比为 2 进行访问：
+1. 进行媒体查询，305px&lt;=30em(30em*16px=480px)为真，则 img 标签的 width 为 100vw，即 100vw * 305px = 305px
+2. 400px &lt; 305px * 2(图片宽度*屏幕像素比=设备所需像素) &lt; 800px，所以选择使用上一梯度 swing-800.jpg 下载使用</p>
+
+<p>总结：sizes 属性用于指定 img 标签的宽度，srcset 属性用于指定需要下载的图片</p>
+
+        </div>
+    </section>
+</article>
+
+
+
+    
+      <footer class="page-footer grey lighten-5">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l6">
+        <h5 class="black-text">Footer Content</h5>
+<p class="grey-text text-darken-4">You can use rows and columns here to organize your footer content.</p>
+    </div>
+
+    
+        <div class="col s12 l4 offset-l2">
+            <div class="row">
+                
+                
+                
+                    <div class="col s6 clear-padding">
+                        
+
+<h5 class="black-text">Home</h5>
+<ul>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/">Home</a>
+    </li>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/about/">About</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+                    <div class="col s6 clear-padding">
+                        
+
+<h5 class="black-text">Links</h5>
+<ul>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/#">Service 1</a>
+    </li>
+    
+    <li>
+        <a class="grey-text text-darken-4" href="/#">Service 2</a>
+    </li>
+    
+</ul>
+
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="grey-text text-darken-4">© 2019 Copyright Text</span>
+<div class="right">
+    
+<ul id="dropdown-languages" class="dropdown-content">
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/">English</a>
+    </li>
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/fr/">Français</a>
+    </li>
+    
+    <li>
+        <a class="dropdown-item black-text" href="https://example.com/zh/">简体中文</a>
+    </li>
+    
+</ul>
+<a class="dropdown-languages-selector dropdown-trigger black-text" href="#!" data-target="dropdown-languages">English
+    <i class="material-icons right">arrow_drop_down</i>
+</a>
+
+
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://example.com/js/script.js"></script>
+  </body>
+</html>
