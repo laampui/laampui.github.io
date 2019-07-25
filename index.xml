@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Laam Pui&#39;s Blog</title>
-    <link>https://example.com/</link>
+    <link>https://lampui.github.io/</link>
     <description>Recent content on Laam Pui&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2019 Copyright Text</copyright>
     <lastBuildDate>Tue, 18 Jun 2019 11:15:31 +0800</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lampui.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Who is this</title>
-      <link>https://example.com/about/</link>
+      <link>https://lampui.github.io/about/</link>
       <pubDate>Tue, 18 Jun 2019 11:15:31 +0800</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://lampui.github.io/about/</guid>
       <description>关于我 日常使用 emacs
 Twitter</description>
     </item>
     
     <item>
       <title>学习 srcset 属性</title>
-      <link>https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</link>
+      <link>https://lampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</guid>
+      <guid>https://lampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</guid>
       <description>&amp;emsp;&amp;emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
 &amp;emsp;&amp;emsp;上图中的&amp;rdquo;1&amp;rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
 &amp;emsp;&amp;emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
@@ -38,10 +38,10 @@ Twitter</description>
     
     <item>
       <title>[译] 使用 CSS 的 font-size-adjust 属性改善网页排版</title>
-      <link>https://example.com/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</link>
+      <link>https://lampui.github.io/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</link>
       <pubDate>Wed, 13 Sep 2017 10:30:45 +0000</pubDate>
       
-      <guid>https://example.com/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</guid>
+      <guid>https://lampui.github.io/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</guid>
       <description>这是上周在掘金领的一篇翻译，是关于 CSS 的文章，我将网页放大了 5 倍都没看出什么区别来。 
   原文地址：Improve Web Typography with CSS Font Size Adjust 原文作者：Panayotis Matsinopoulos 译文出自：掘金翻译计划 本文永久链接：https://github.com/xitu/gold-miner/blob/master/TODO/improve-web-typography-css-font-size-adjust.md 译者：lampui 校对者：sun、Yuuoniy   CSS 中的 font-size-adjust 属性允许开发者基于小写字母的高度指定 font-size ，这可以有效地提高网页文字的可读性。
 在这篇文章中，你不仅能了解到 font-size-adjust 属性的重要性，并且还能学会如何在你的项目中使用它。
@@ -54,19 +54,19 @@ font-size　属性会设置网页中所有 font-family 下你想使用的字体�
     
     <item>
       <title>利用 xrandr 修改 Linux 屏幕分辨率</title>
-      <link>https://example.com/posts/xrandr/</link>
+      <link>https://lampui.github.io/posts/xrandr/</link>
       <pubDate>Sun, 03 Sep 2017 11:46:00 +0000</pubDate>
       
-      <guid>https://example.com/posts/xrandr/</guid>
+      <guid>https://lampui.github.io/posts/xrandr/</guid>
       <description>  不像 Windows 的远程桌面连接，可以在外观选项卡自动调节屏幕分辨率，Linux 中要做点工作，在使用大屏幕计算机远程自己的小屏幕计算机时，显得较为有用，让它全屏显示。 每一行都是命令，即可以打开终端逐个字母地敲，但……因为效（tōu）率（lǎn），复制粘贴到~/.profile文件中，每次开机让系统自动加载。。。  1 2 3 4 5 6 7 8  #set high resulotion cvt 1920 1080 xrandr --newmode &amp;#34;1920x1080&amp;#34; 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1920x1080&amp;#34; cvt 1440 900 xrandr --newmode &amp;#34;1440x900&amp;#34; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1440x900&amp;#34; # 使用 xandr -s 1920x1080   </description>
     </item>
     
     <item>
       <title>刷LeetCode No.136</title>
-      <link>https://example.com/posts/leetcode136/</link>
+      <link>https://lampui.github.io/posts/leetcode136/</link>
       <pubDate>Sun, 30 Jul 2017 10:16:51 +0800</pubDate>
       
-      <guid>https://example.com/posts/leetcode136/</guid>
+      <guid>https://lampui.github.io/posts/leetcode136/</guid>
       <description>今天刷了两道 LeetCode，两题难度都是 Easy 级别，不出意外地选择了用 JavaScript 去做，其中 No.136 Single Number 这题参考了讨论区的答案，只有一行代码，被惊艳到了，想研究一下。 1 2 3  var singleNumber = function(nums) { return nums.reduce((a, b) =&amp;gt; a^b); }    首先看题目的描述
 Given an array of integers, every element appears twice except for one. Find that single one.
 Note: Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?

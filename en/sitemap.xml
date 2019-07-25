@@ -3,94 +3,94 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://lampui.github.io/</loc>
     <lastmod>2019-06-18T11:15:31+08:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/"
+                href="https://lampui.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://example.com/zh/"
+                href="https://lampui.github.io/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/"
+                href="https://lampui.github.io/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://lampui.github.io/about/</loc>
     <lastmod>2019-06-18T11:15:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/</loc>
+    <loc>https://lampui.github.io/posts/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</loc>
+    <loc>https://lampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</loc>
+    <loc>https://lampui.github.io/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</loc>
     <lastmod>2017-09-13T10:30:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/xrandr/</loc>
+    <loc>https://lampui.github.io/posts/xrandr/</loc>
     <lastmod>2017-09-03T11:46:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/leetcode136/</loc>
+    <loc>https://lampui.github.io/posts/leetcode136/</loc>
     <lastmod>2017-07-30T10:16:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://lampui.github.io/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/categories/"
+                href="https://lampui.github.io/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://example.com/zh/categories/"
+                href="https://lampui.github.io/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/categories/"
+                href="https://lampui.github.io/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://lampui.github.io/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://example.com/fr/tags/"
+                href="https://lampui.github.io/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://example.com/zh/tags/"
+                href="https://lampui.github.io/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/tags/"
+                href="https://lampui.github.io/tags/"
                 />
   </url>
   
