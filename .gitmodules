@@ -1,0 +1,3 @@
+[submodule "themes/hugo-material-blog"]
+	path = themes/hugo-material-blog
+	url = https://github.com/lampui/hugo-material-blog

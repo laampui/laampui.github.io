@@ -1,0 +1,20 @@
+---
+title: "利用 xrandr 修改 Linux 屏幕分辨率"
+date: 2017-09-03 11:46:00
+url: '/posts/xrandr'
+markup: 'org'
+---
+#+BEGIN_QUOTE
+不像 Windows 的远程桌面连接，可以在外观选项卡自动调节屏幕分辨率，Linux 中要做点工作，在使用大屏幕计算机远程自己的小屏幕计算机时，显得较为有用，让它全屏显示。 每一行都是命令，即可以打开终端逐个字母地敲，但……因为效（tōu）率（lǎn），复制粘贴到~/.profile文件中，每次开机让系统自动加载。。。
+#+END_QUOTE
+
+{{<highlight shell "linenos=table">}}
+#set high resulotion 
+cvt 1920 1080 
+xrandr --newmode "1920x1080" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync 
+xrandr --addmode eDP-1 "1920x1080" cvt 1440 900 
+xrandr --newmode "1440x900" 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync 
+xrandr --addmode eDP-1 "1440x900" 
+# 使用
+xandr -s 1920x1080
+{{</highlight>}}
