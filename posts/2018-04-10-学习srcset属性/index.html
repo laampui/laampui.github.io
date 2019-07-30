@@ -7,7 +7,7 @@
 
 <meta property="og:title" content="学习 srcset 属性" />
 <meta property="og:description" content="&emsp;&emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
-&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+ &emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
 &emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
  srcset 属性可以让浏览器有所选择地下载适合的图片。
  &emsp;&emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="学习 srcset 属性"/>
 <meta name="twitter:description" content="&emsp;&emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
-&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
+ &emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
 &emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
  srcset 属性可以让浏览器有所选择地下载适合的图片。
  &emsp;&emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
@@ -126,7 +126,7 @@
     
     <section class="row">
         <div class="col s12 m10 offset-m1 l10 offset-l1">
-            <h1>学习 srcset 属性</h1>
+            <h5>学习 srcset 属性</h5>
         </div>
     </section>
 
@@ -149,9 +149,10 @@
         <div class="col s12 m8 offset-m2 l6">
             <p>&emsp;&emsp;要理解 <code>srcset</code> 属性，首先要了解 <code>devicePixelRatio</code>，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 <code>window.devicePixelRatio</code> 查看</p>
 
-<p><img src="https://i.imgur.com/qQrxtHE.png" alt="window.devicePixelRatio" /></p>
-
-<p>&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。</p>
+<p><div style="text-align:center;">
+<img src="https://i.imgur.com/t46Zyqj.png" alt="window.devicePixelRatio" />
+</div>
+&emsp;&emsp;上图中的&rdquo;1&rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。</p>
 
 <p>&emsp;&emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。</p>
 
