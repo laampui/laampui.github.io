@@ -6,7 +6,7 @@
     <description>Recent content on Laam Pui&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2019 Copyright Text</copyright>
+    <copyright>© 2017</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 11:17:06 +0800</lastBuildDate>
     
 	<atom:link href="https://lampui.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -70,7 +70,7 @@ font-size　属性会设置网页中所有 font-family 下你想使用的字体�
       <pubDate>Sun, 03 Sep 2017 11:46:00 +0000</pubDate>
       
       <guid>https://lampui.github.io/posts/xrandr/</guid>
-      <description>  不像 Windows 的远程桌面连接，可以在外观选项卡自动调节屏幕分辨率，Linux 中要做点工作，在使用大屏幕计算机远程自己的小屏幕计算机时，显得较为有用，让它全屏显示。 每一行都是命令，即可以打开终端逐个字母地敲，但……因为效（tōu）率（lǎn），复制粘贴到~/.profile文件中，每次开机让系统自动加载。。。  1 2 3 4 5 6 7 8  #set high resulotion cvt 1920 1080 xrandr --newmode &amp;#34;1920x1080&amp;#34; 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1920x1080&amp;#34; cvt 1440 900 xrandr --newmode &amp;#34;1440x900&amp;#34; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1440x900&amp;#34; # 使用 xandr -s 1920x1080   </description>
+      <description>  不像 Windows 的远程桌面连接，可以在外观选项卡自动调节屏幕分辨率，Linux 中要做点工作，在使用大屏幕计算机远程自己的小屏幕计算机时，显得较为有用，让它全屏显示。 每一行都是命令，即可以打开终端逐个字母地敲，但……因为效（tōu）率（lǎn），复制粘贴到~/.profile文件中，每次开机让系统自动加载。。。   1 2 3 4 5 6 7 8  #set high resulotion cvt 1920 1080 xrandr --newmode &amp;#34;1920x1080&amp;#34; 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1920x1080&amp;#34; cvt 1440 900 xrandr --newmode &amp;#34;1440x900&amp;#34; 106.50 1440 1528 1672 1904 900 903 909 934 -hsync +vsync xrandr --addmode eDP-1 &amp;#34;1440x900&amp;#34; # 使用 xandr -s 1920x1080   </description>
     </item>
     
     <item>
