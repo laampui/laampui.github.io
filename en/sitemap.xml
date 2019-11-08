@@ -1,46 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lampui.github.io/en/categories/</loc>
+    <loc>https://laampui.github.io/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lampui.github.io/categories/"
+                href="https://laampui.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lampui.github.io/en/categories/"
+                href="https://laampui.github.io/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://lampui.github.io/en/</loc>
+    <loc>https://laampui.github.io/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lampui.github.io/"
+                href="https://laampui.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lampui.github.io/en/"
+                href="https://laampui.github.io/en/"
                 />
   </url>
   
   <url>
-    <loc>https://lampui.github.io/en/tags/</loc>
+    <loc>https://laampui.github.io/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://lampui.github.io/tags/"
+                href="https://laampui.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lampui.github.io/en/tags/"
+                href="https://laampui.github.io/en/tags/"
                 />
   </url>
   
