@@ -7,10 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2017</copyright>
-    <lastBuildDate>Mon, 12 Aug 2019 11:17:06 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://laampui.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>记录踩的一个有关中文输入法的坑</title>
+      <link>https://laampui.github.io/posts/2019-11-28-%E8%B8%A9%E5%9D%91%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://laampui.github.io/posts/2019-11-28-%E8%B8%A9%E5%9D%91%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
+      <description>最近踩了一个坑，是关于中文输入法的，想记录一下。
+TL;DR
+怪异行为：在手机端，调用中文输入法的数字键盘，输入数字时，所返回的 keyCode 为 229。
+产生原因：
+ If an Input Method Editor is processing key input and the event is keydown, return 229.
+ 解决方法： 因为 ASCII 是 unicode 的子集，所以可以巧妙利用 charCodeAt 方法得到正确的 keyCode 值
+1  &amp;lt;input id=&amp;#34;foo&amp;#34; type=&amp;#34;text&amp;#34; maxlength=&amp;#34;6&amp;#34; /&amp;gt;   |
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  $(&amp;#39;#foo&amp;#39;).on(&amp;#39;keyup&amp;#39;, function (e) { // 输入其他字符，直接清空  if (this.value &amp;amp;&amp;amp; !</description>
+    </item>
     
     <item>
       <title>记录一次使用 sherlock.py 的过程</title>
