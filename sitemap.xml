@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://laampui.github.io/en/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://laampui.github.io/zh/sitemap.xml</loc>
-		
-	   	<lastmod>2019-11-28T00:00:00+00:00</lastmod>
-		
-	</sitemap>
-	
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://laampui.github.io/posts/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/2019-11-28-%E8%B8%A9%E5%9D%91%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <lastmod>2019-11-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8-sherlock.py-%E7%9A%84%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2019-08-12T11:17:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/</loc>
+    <lastmod>2019-06-18T11:15:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/about/</loc>
+    <lastmod>2019-06-18T11:15:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2017-09-13T10:30:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/xrandr/</loc>
+    <lastmod>2017-09-03T11:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/posts/leetcode136/</loc>
+    <lastmod>2017-07-30T10:16:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://laampui.github.io/tags/</loc>
+  </url>
+  
+</urlset>

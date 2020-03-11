@@ -6,8 +6,8 @@
     <description>Recent content on Laam Pui&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2017</copyright>
-    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>© 2017 - 2020</copyright>
+    <lastBuildDate>Tue, 18 Jun 2019 11:15:31 +0800</lastBuildDate>
     
 	<atom:link href="https://laampui.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -46,8 +46,7 @@ TL;DR
       
       <guid>https://laampui.github.io/about/</guid>
       <description>关于我 日常使用 emacs
-在以下地方找到我
-Twitter、 Instagram、 Telegram、 v2ex</description>
+在以下地方找到我 Twitter、 Telegram、 v2ex</description>
     </item>
     
     <item>
@@ -56,12 +55,12 @@ Twitter、 Instagram、 Telegram、 v2ex</description>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://laampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/</guid>
-      <description>&amp;emsp;&amp;emsp;要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
- &amp;emsp;&amp;emsp;上图中的&amp;rdquo;1&amp;rdquo;表示设备应该使用 1 个像素单位来表示 CSS 中的 1px，同理，当该值为 3 时，CSS 中的 1px 就需要设备使用 3 个像素单位去呈现，顾名思义，devicePixelRatio，就是设备（device）所使用的像素个数与 CSS 中的单位像素（pixel）的比值。
-&amp;emsp;&amp;emsp;在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+      <description>要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
+ 在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
  srcset 属性可以让浏览器有所选择地下载适合的图片。
- &amp;emsp;&amp;emsp;情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
-&amp;emsp;&amp;emsp;这种用法仅限于 img 标签宽度已知 1 2 3 4  &amp;lt;img src=&amp;#34;/uploads/100-marie-lloyd.jpg&amp;#34; srcset=&amp;#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&amp;#34; alt=&amp;#34;A singer on the stage&amp;#34; width=&amp;#34;100&amp;#34; height=&amp;#34;150&amp;#34;&amp;gt;   &amp;emsp;&amp;emsp;上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。</description>
+  情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+ 这种用法仅限于 img 标签宽度已知 1 2 3 4  &amp;lt;img src=&amp;#34;/uploads/100-marie-lloyd.jpg&amp;#34; srcset=&amp;#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&amp;#34; alt=&amp;#34;A singer on the stage&amp;#34; width=&amp;#34;100&amp;#34; height=&amp;#34;150&amp;#34;&amp;gt;   上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
+ 情景2：根据 Viewport 大小，让浏览器选择适合的图片 1 2 3 4 5 6 7 8  &amp;lt;img sizes=&amp;#34;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&amp;#34; srcset=&amp;#34;swing-200.</description>
     </item>
     
     <item>
@@ -70,7 +69,7 @@ Twitter、 Instagram、 Telegram、 v2ex</description>
       <pubDate>Wed, 13 Sep 2017 10:30:45 +0000</pubDate>
       
       <guid>https://laampui.github.io/posts/2017-09-12-%E4%BD%BF%E7%94%A8css%E7%9A%84font-size-adjust%E5%B1%9E%E6%80%A7%E6%94%B9%E5%96%84%E7%BD%91%E9%A1%B5%E6%8E%92%E7%89%88/</guid>
-      <description>这是上周在掘金领的一篇翻译，是关于 CSS 的文章，我将网页放大了 5 倍都没看出什么区别来。 
+      <description>这是上周在掘金领的一篇翻译，是关于 CSS 的文章，我将网页放大了 5 倍都没看出什么区别来。
   原文地址：Improve Web Typography with CSS Font Size Adjust 原文作者：Panayotis Matsinopoulos 译文出自：掘金翻译计划 本文永久链接：https://github.com/xitu/gold-miner/blob/master/TODO/improve-web-typography-css-font-size-adjust.md 译者：lampui 校对者：sun、Yuuoniy   CSS 中的 font-size-adjust 属性允许开发者基于小写字母的高度指定 font-size ，这可以有效地提高网页文字的可读性。
 在这篇文章中，你不仅能了解到 font-size-adjust 属性的重要性，并且还能学会如何在你的项目中使用它。
 font-size-adjust 的重要性 你访问的网站大多都是由文本组成的，由于书面文字是网站的重要组成部分，因此就很值得把注意力放到你用来显示信息的字体上面。选对正确的字体能带给用户愉快的阅读体验，然而，使用不恰当的字体则会使网站变得难以阅读。当你决定将要使用什么字体后，一般你就会再给这个字体选择一个合适的大小。
