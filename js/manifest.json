@@ -1,0 +1,9 @@
+{
+  "name": "LP'sBlog",
+  "short_name": "blog",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}
