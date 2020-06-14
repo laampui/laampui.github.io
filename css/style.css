@@ -48,3 +48,11 @@ figure>img {
 .dropdown-languages-selector {
     display: inline-block;
 }
+
+/* details & summary tag */
+details>summary {
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+

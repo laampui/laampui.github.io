@@ -1,16 +1,19 @@
-$('.dropdown-trigger').dropdown();
+document.addEventListener('DOMContentLoaded', function() {
+  var dropdownTrigger = document.querySelectorAll('.dropdown-trigger');
+  var dropdownInstances = M.Dropdown.init(dropdownTrigger);
 
-$(document).ready(function(){
-  $('.sidenav').sidenav();
+  var sidenav = document.querySelectorAll('.sidenav');
+  var sidenavInstances = M.Sidenav.init(sidenav);
 });
-
 
 window.onload = () => {
   'use strict';
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('./sw.js');
+      .register('/sw.js')
+      .then(function (res) {})
+      .catch(function (err) {})
   }
 }
 
