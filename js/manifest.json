@@ -1,13 +1,13 @@
 {
-  "name": "LP'sBlog",
+  "name": "LP's Blog",
   "short_name": "blog",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#adadad",
+  "background_color": "#adadad",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "icons": [{
-      "src": "apple-icon.png",
+      "src": "../images/app-icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }]
