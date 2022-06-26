@@ -6,15 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta property="og:title" content="面经" />
-<meta property="og:description" content="最近在面试，记录一些遇到的面试题     浏览器缓存有哪些，及其区别，缓存机制    HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？    vue 每个生命周期做了什么    babel 原理    正则实现千分位    闭包，为什么用闭包？如何解决内存泄漏    CSS 选择器优先级    性能优化(代码压缩原理, TreeShaking 原理)    箭头函数与普通函数区别    求输出    1 2 3 4 5 6 7 8  const obj = { 0: 1, 1: 2, length: 2, push: Array." />
+<meta property="og:description" content=" 最近在面试，记录一些遇到的面试题
+浏览器缓存有哪些，及其区别，缓存机制 HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？ vue 每个生命周期做了什么 babel 原理 正则实现千分位 闭包，为什么用闭包？如何解决内存泄漏 CSS 选择器优先级 性能优化(代码压缩原理, TreeShaking 原理) 箭头函数与普通函数区别 求输出 1 2 3 4 5 6 7 8 const obj = { 0: 1, 1: 2, length: 2, push: Array.prototype.push } obj.push(3) console.log(obj) " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://laampui.github.io/posts/2020-06-10-%E9%9D%A2%E7%BB%8F/" />
+<meta property="og:url" content="https://laampui.github.io/posts/2020-06-10-%E9%9D%A2%E7%BB%8F/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-06-10T00:00:00+00:00" />
 
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="面经"/>
-<meta name="twitter:description" content="最近在面试，记录一些遇到的面试题     浏览器缓存有哪些，及其区别，缓存机制    HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？    vue 每个生命周期做了什么    babel 原理    正则实现千分位    闭包，为什么用闭包？如何解决内存泄漏    CSS 选择器优先级    性能优化(代码压缩原理, TreeShaking 原理)    箭头函数与普通函数区别    求输出    1 2 3 4 5 6 7 8  const obj = { 0: 1, 1: 2, length: 2, push: Array."/>
+<meta name="twitter:description" content=" 最近在面试，记录一些遇到的面试题
+浏览器缓存有哪些，及其区别，缓存机制 HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？ vue 每个生命周期做了什么 babel 原理 正则实现千分位 闭包，为什么用闭包？如何解决内存泄漏 CSS 选择器优先级 性能优化(代码压缩原理, TreeShaking 原理) 箭头函数与普通函数区别 求输出 1 2 3 4 5 6 7 8 const obj = { 0: 1, 1: 2, length: 2, push: Array.prototype.push } obj.push(3) console.log(obj) "/>
 
 
     <meta name="description" content="">
@@ -141,87 +144,42 @@
         </div>
         <div class="col s12 m8 offset-m2 l6">
             <img width="100%" src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"/>
-<p>
-最近在面试，记录一些遇到的面试题
-</p>
+<p>最近在面试，记录一些遇到的面试题</p>
 <hr>
 <ol>
-<li>
-<p>
-浏览器缓存有哪些，及其区别，缓存机制
-</p>
-</li>
-<li>
-<p>
-HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？
-</p>
-</li>
-<li>
-<p>
-vue 每个生命周期做了什么
-</p>
-</li>
-<li>
-<p>
-babel 原理
-</p>
-</li>
-<li>
-<p>
-正则实现千分位
-</p>
-</li>
-<li>
-<p>
-闭包，为什么用闭包？如何解决内存泄漏
-</p>
-</li>
-<li>
-<p>
-CSS 选择器优先级
-</p>
-</li>
-<li>
-<p>
-性能优化(代码压缩原理, TreeShaking 原理)
-</p>
-</li>
-<li>
-<p>
-箭头函数与普通函数区别
-</p>
-</li>
-<li>
-<p>
-求输出
-</p>
-</li>
+<li>浏览器缓存有哪些，及其区别，缓存机制</li>
+<li>HTTP 头部字段介绍，TCP 为什么比 UDP 靠谱？数据包是如何传输的？</li>
+<li>vue 每个生命周期做了什么</li>
+<li>babel 原理</li>
+<li>正则实现千分位</li>
+<li>闭包，为什么用闭包？如何解决内存泄漏</li>
+<li>CSS 选择器优先级</li>
+<li>性能优化(代码压缩原理, TreeShaking 原理)</li>
+<li>箭头函数与普通函数区别</li>
+<li>求输出</li>
 </ol>
-<p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
-  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
-  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
-  <span style="color:#a6e22e">push</span><span style="color:#f92672">:</span> Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">push</span>
-}
-<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
-<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>)
-</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">length</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">push</span><span style="color:#f92672">:</span> Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">push</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">push</span>(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>)</span></span></code></pre></td></tr></table>
 </div>
 </div>
-</p>
 
         </div>
     </section>

@@ -7,24 +7,25 @@
 
 <meta property="og:title" content="学习 srcset 属性" />
 <meta property="og:description" content="要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
- 在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
- srcset 属性可以让浏览器有所选择地下载适合的图片。
-  情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
- 这种用法仅限于 img 标签宽度已知 1 2 3 4  &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt;   上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
- 情景2：根据 Viewport 大小，让浏览器选择适合的图片 1 2 3 4 5 6 7 8  &lt;img sizes=&#34;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&#34; srcset=&#34;swing-200." />
+在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+srcset 属性可以让浏览器有所选择地下载适合的图片。
+情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+这种用法仅限于 img 标签宽度已知 1 2 3 4 &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt; 上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
+情景2：根据 Viewport 大小，让浏览器选择适合的图片 1 2 3 4 5 6 7 8 &lt;img sizes=&#34;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&#34; srcset=&#34;swing-200." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://laampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/" />
+<meta property="og:url" content="https://laampui.github.io/posts/2018-04-10-%E5%AD%A6%E4%B9%A0srcset%E5%B1%9E%E6%80%A7/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-04-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-04-10T00:00:00+00:00" />
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="学习 srcset 属性"/>
 <meta name="twitter:description" content="要理解 srcset 属性，首先要了解 devicePixelRatio，即屏幕像素比，不同的屏幕设备有不同的值，可以通过 window.devicePixelRatio 查看
- 在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
- srcset 属性可以让浏览器有所选择地下载适合的图片。
-  情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
- 这种用法仅限于 img 标签宽度已知 1 2 3 4  &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt;   上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
- 情景2：根据 Viewport 大小，让浏览器选择适合的图片 1 2 3 4 5 6 7 8  &lt;img sizes=&#34;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&#34; srcset=&#34;swing-200."/>
+在处理响应式网页时，有时为了在不同的屏幕设备上，同一副图片能够合适地呈现，这时可以考虑使用 srcset 属性。
+srcset 属性可以让浏览器有所选择地下载适合的图片。
+情景1：根据 devicePixelRatio 大小，让浏览器选择合适的图片
+这种用法仅限于 img 标签宽度已知 1 2 3 4 &lt;img src=&#34;/uploads/100-marie-lloyd.jpg&#34; srcset=&#34;/uploads/150-marie-lloyd.jpg 1.5x, /uploads/200-marie-lloyd.jpg 2x&#34; alt=&#34;A singer on the stage&#34; width=&#34;100&#34; height=&#34;150&#34;&gt; 上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，150-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比为 2 时，200-marie-lloyd.jpg 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 srcset 属性时，100-marie-lloyd.jpg 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。
+情景2：根据 Viewport 大小，让浏览器选择适合的图片 1 2 3 4 5 6 7 8 &lt;img sizes=&#34;(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)&#34; srcset=&#34;swing-200."/>
 
 
     <meta name="description" content="">
@@ -158,42 +159,42 @@
 </blockquote>
 <p>  情景1：根据 <code>devicePixelRatio</code> 大小，让浏览器选择合适的图片</p>
 <p>  这种用法仅限于 img 标签宽度已知
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/100-marie-lloyd.jpg&#34;</span>
-    <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/150-marie-lloyd.jpg 1.5x, 
-</span><span style="color:#e6db74">            /uploads/200-marie-lloyd.jpg 2x&#34;</span>
-    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A singer on the stage&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span>&gt;</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/100-marie-lloyd.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/uploads/150-marie-lloyd.jpg 1.5x, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            /uploads/200-marie-lloyd.jpg 2x&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A singer on the stage&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span>&gt;</span></span></code></pre></td></tr></table>
 </div>
 </div>
   上面代码一共设置有 3 幅可选图片，当屏幕像素比为 1.5 时，<code>150-marie-lloyd.jpg</code> 这幅图片会被下载使用；当屏幕像素比为 2 时，<code>200-marie-lloyd.jpg</code> 这幅图片会被下载使用；当屏幕像素比既不是 1.5 也不是 2 时，又或者浏览器不识别 <code>srcset</code> 属性时，<code>100-marie-lloyd.jpg</code> 这幅图片会被下载使用。屏幕像素密度越大，使用分辨率越大的图片。</p>
 <p>  情景2：根据 <code>Viewport</code> 大小，让浏览器选择适合的图片
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(max-width: 30em) 100vw, 
-</span><span style="color:#e6db74">            (max-width: 50em) 50vw, 
-</span><span style="color:#e6db74">            calc(33vw - 100px)&#34;</span>
-<span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-200.jpg 200w, 
-</span><span style="color:#e6db74">        swing-400.jpg 400w, 
-</span><span style="color:#e6db74">        swing-800.jpg 800w, 
-</span><span style="color:#e6db74">        swing-1600.jpg 1600w&#34;</span>
-<span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-400.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Kettlebell Swing&#34;</span>&gt;</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">sizes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(max-width: 30em) 100vw, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            (max-width: 50em) 50vw, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            calc(33vw - 100px)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">srcset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-200.jpg 200w, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        swing-400.jpg 400w, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        swing-800.jpg 800w, 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        swing-1600.jpg 1600w&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swing-400.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Kettlebell Swing&#34;</span>&gt;</span></span></code></pre></td></tr></table>
 </div>
 </div>
 上例，在 <code>sizes</code> 属性加入媒体查询，当 viewport 宽度小于或等于 30em 时，img 标签的 <code>width</code> 将被限制在 100vw。
