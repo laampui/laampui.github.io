@@ -8,8 +8,8 @@
 <meta property="og:title" content="Git mergeStyle" />
 <meta property="og:description" content="Git 的 mergeStyle 一共有 3 个选项，分别是 merge（默认）, diff3, zdiff3
 可以通过如下命令设置： 1 git config --global merge.conflictStyle zdiff3 也可以手动编辑 ~/.gitconfig 文件添加以下两行
-1 2 [merge] conflictStyle = zdiff3 merge 1 2 3 4 5 &lt;&lt;&lt;&lt;&lt;&lt; HEAD console.log(123) ======== console.log(456) &gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本互相比较，是需要保留 console.log(123) 还是 console.log(456)
-diff3 1 2 3 4 5 6 7 8 9 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD alert(123) console.log(123) ||||||| console.log() ========= alert(123) console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本之间多了一个 BASE 版本(竖线跟横线之间)，就是两个版本的共同祖先。
+1 2 [merge] conflictStyle = zdiff3 merge 1 2 3 4 5 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD console.log(123) ======= console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本互相比较，是需要保留 console.log(123) 还是 console.log(456)
+diff3 1 2 3 4 5 6 7 8 9 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD alert(123) console.log(123) ||||||| console.log() ======= alert(123) console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本之间多了一个 BASE 版本(竖线跟横线之间)，就是两个版本的共同祖先。
 zdiff3 (git 2.35&#43;) 1 2 3 4 5 6 7 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD console." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://laampui.github.io/posts/2022-06-26-git-mergestyle/" /><meta property="article:section" content="posts" />
@@ -21,8 +21,8 @@ zdiff3 (git 2.35&#43;) 1 2 3 4 5 6 7 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD console."
 <meta name="twitter:title" content="Git mergeStyle"/>
 <meta name="twitter:description" content="Git 的 mergeStyle 一共有 3 个选项，分别是 merge（默认）, diff3, zdiff3
 可以通过如下命令设置： 1 git config --global merge.conflictStyle zdiff3 也可以手动编辑 ~/.gitconfig 文件添加以下两行
-1 2 [merge] conflictStyle = zdiff3 merge 1 2 3 4 5 &lt;&lt;&lt;&lt;&lt;&lt; HEAD console.log(123) ======== console.log(456) &gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本互相比较，是需要保留 console.log(123) 还是 console.log(456)
-diff3 1 2 3 4 5 6 7 8 9 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD alert(123) console.log(123) ||||||| console.log() ========= alert(123) console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本之间多了一个 BASE 版本(竖线跟横线之间)，就是两个版本的共同祖先。
+1 2 [merge] conflictStyle = zdiff3 merge 1 2 3 4 5 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD console.log(123) ======= console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本互相比较，是需要保留 console.log(123) 还是 console.log(456)
+diff3 1 2 3 4 5 6 7 8 9 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD alert(123) console.log(123) ||||||| console.log() ======= alert(123) console.log(456) &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch 两个版本之间多了一个 BASE 版本(竖线跟横线之间)，就是两个版本的共同祖先。
 zdiff3 (git 2.35&#43;) 1 2 3 4 5 6 7 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD console."/>
 
 
@@ -189,11 +189,11 @@ merge
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>123<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">========</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=======</span>
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>456<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt; feature-branch</span></span></code></pre></td></tr></table>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>
@@ -224,7 +224,7 @@ diff3
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>123<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">||||||</span>|
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">=========</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=======</span>
 </span></span><span style="display:flex;"><span>alert<span style="color:#f92672">(</span>123<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>456<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch</span></span></code></pre></td></tr></table>
@@ -253,7 +253,7 @@ zdiff3 (git 2.35+)
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>123<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">||||||</span>|
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">()</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">=========</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=======</span>
 </span></span><span style="display:flex;"><span>console.log<span style="color:#f92672">(</span>456<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch</span></span></code></pre></td></tr></table>
 </div>
